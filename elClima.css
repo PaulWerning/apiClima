@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
 font-family: Arial, Helvetica, sans-serif;
 background: linear-gradient(to right, blue,white);
@@ -14,30 +13,15 @@ h1{
 p{
   text-align: center;
 }
-
 .input{
   text-align: center;
   margin: 10px 0; 
 }
-
-  /*input[type="text"]{
-    height: 50px;
-    width: 600px;
-    background: #e7e7e7;
-    border: none;
-    border-radius: 2px;
-    padding: 10px 10px;
-  }
-  input[type="submit"]{
-    height: 50px;
-    width: 100px;
-    background: #e7e7e7;
-    border: none;
-    border-radius: 2px;
-
-  }*/
-
-  .climaLocal{
-    text-align: center;
-
-  }
+.climaLocal{
+  text-align: center;
+  background-color:dimgrey;
+  display: inline-block;
+  border-radius: 50px;
+  box-shadow: 5px 5px 10px #191b1b, -5px -5px 10px #595959;
+  padding: 3%;
+}

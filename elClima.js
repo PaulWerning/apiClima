@@ -17,7 +17,7 @@ function getLocation() {
 function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   " Longitude: " + position.coords.longitude;
-  fetch('http://api.openweathermap.org/data/2.5/weather?lat='+position.coords.latitude+'&lon='+position.coords.longitude+'&appid=5469f226b02c16d4bd71785be34d42c8&units=metric&lang=es')
+  fetch('https://api.openweathermap.org/data/2.5/weather?lat='+position.coords.latitude+'&lon='+position.coords.longitude+'&appid=5469f226b02c16d4bd71785be34d42c8&units=metric&lang=es')
     .then(Response => Response.json())
     .then(data => {
         var ingresaCiudadvalue = data['name'];
@@ -41,7 +41,7 @@ ingresaCiudad.addEventListener('keyup',function(e) {
     var keycode = e.keyCode || e.which;
     if (keycode == 13) {
       /*alert("Enter!"); lo usé para saber si entraba antes de llamar a la api*/
-      fetch('http://api.openweathermap.org/data/2.5/weather?q='+ingresaCiudad.value+'&appid=5469f226b02c16d4bd71785be34d42c8&units=metric&lang=es')
+      fetch('https://api.openweathermap.org/data/2.5/weather?q='+ingresaCiudad.value+'&appid=5469f226b02c16d4bd71785be34d42c8&units=metric&lang=es')
     .then(Response => Response.json())
     .then(data => {
         var ingresaCiudadvalue = data['name'];
@@ -61,7 +61,7 @@ ingresaCiudad.addEventListener('keyup',function(e) {
 
 /**evento click en el botón */
 button.addEventListener('click',function(){
-    fetch('http://api.openweathermap.org/data/2.5/weather?q='+ingresaCiudad.value+'&appid=5469f226b02c16d4bd71785be34d42c8&units=metric&lang=es')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+ingresaCiudad.value+'&appid=5469f226b02c16d4bd71785be34d42c8&units=metric&lang=es')
     .then(Response => Response.json())
     .then(data => {
         var ingresaCiudadvalue = data['name'];

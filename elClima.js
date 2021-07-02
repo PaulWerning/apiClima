@@ -29,7 +29,7 @@ function showPosition(position) {
         ingresaCiudad.innerHTML = ingresaCiudadvalue;
         temp.innerHTML = tempvalue;
         desc.innerHTML = descvalue;
-        icon.src = "http://openweathermap.org/img/wn/"+iconvalue+".png";
+        icon.src = "https://openweathermap.org/img/wn/"+iconvalue+".png";
     })
 
 .catch(err => alert("Nombre de ciudad equivocado!"))
@@ -52,7 +52,7 @@ ingresaCiudad.addEventListener('keyup',function(e) {
         ingresaCiudad.innerHTML = ingresaCiudadvalue;
         temp.innerHTML = tempvalue;
         desc.innerHTML = descvalue;
-        icon.src = "http://openweathermap.org/img/wn/"+iconvalue+".png";
+        icon.src = "https://openweathermap.org/img/wn/"+iconvalue+".png";
     })
 
 .catch(err => alert("Nombre de ciudad equivocado!"))
@@ -72,7 +72,7 @@ button.addEventListener('click',function(){
         ingresaCiudad.innerHTML = ingresaCiudadvalue;
         temp.innerHTML = tempvalue;
         desc.innerHTML = descvalue;
-        icon.src = "http://openweathermap.org/img/wn/"+iconvalue+".png";
+        icon.src = "https://openweathermap.org/img/wn/"+iconvalue+".png";
     })
 
 .catch(err => alert("Nombre de ciudad equivocado!"))

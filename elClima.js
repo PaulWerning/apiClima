@@ -1,9 +1,9 @@
-
 var button = document.querySelector('.button')
 var ingresaCiudad = document.querySelector('.ingresaCiudad')
 var desc = document.querySelector('.desc');
 var temp = document.querySelector('.temp');
 var icon = document.querySelector('.icon');
+var NomCiudad = document.querySelector('.NomCiudad')
 /*api de geolocalización https://www.w3schools.com/html/html5_geolocation.asp*/
 var x = document.getElementById("coords");
 function getLocation() {
@@ -13,7 +13,7 @@ function getLocation() {
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
-
+/**boton de calcular coordenadas */
 function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   " Longitude: " + position.coords.longitude;
@@ -25,8 +25,7 @@ function showPosition(position) {
         var descvalue = data['weather'][0]['description'];
         var iconvalue = data['weather'][0]['icon'];
 
-
-        ingresaCiudad.innerHTML = ingresaCiudadvalue;
+        NomCiudad.innerHTML = ingresaCiudadvalue;
         temp.innerHTML = tempvalue;
         desc.innerHTML = descvalue;
         icon.src = "https://openweathermap.org/img/wn/"+iconvalue+".png";
@@ -49,13 +48,13 @@ ingresaCiudad.addEventListener('keyup',function(e) {
         var descvalue = data['weather'][0]['description'];
         var iconvalue = data['weather'][0]['icon'];
 
-        ingresaCiudad.innerHTML = ingresaCiudadvalue;
+        NomCiudad.innerHTML = ingresaCiudadvalue;
         temp.innerHTML = tempvalue;
         desc.innerHTML = descvalue;
         icon.src = "https://openweathermap.org/img/wn/"+iconvalue+".png";
     })
 
-.catch(err => alert("Nombre de ciudad equivocado!"))
+.catch(err => alert("Nombre Inválido"))
     };
 });
 
@@ -69,11 +68,11 @@ button.addEventListener('click',function(){
         var descvalue = data['weather'][0]['description'];
         var iconvalue = data['weather'][0]['icon'];
 
-        ingresaCiudad.innerHTML = ingresaCiudadvalue;
+        NomCiudad.innerHTML = ingresaCiudadvalue;
         temp.innerHTML = tempvalue;
         desc.innerHTML = descvalue;
         icon.src = "https://openweathermap.org/img/wn/"+iconvalue+".png";
     })
 
-.catch(err => alert("Nombre de ciudad equivocado!"))
+.catch(err => alert("Nombre Inválido o no ingresó el nombre"))
 })

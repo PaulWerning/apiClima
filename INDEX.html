@@ -5,19 +5,19 @@
     <link rel="stylesheet" type="text/css" href="elClima.css">
 </head>
 <body>
-    <h1>El Clima en su Ciudad</h1>
-    <p>Clickea el siguiente botón para obtener coordenadas geograficas.</p>
+    <h1 class="text-center class font-weight-bold">El Clima en su Ciudad</h1>
+    <p class="font-weight-bold">Clickea el siguiente botón para obtener coordenadas geograficas.</p>
     <div class="input">
-        <button onclick="getLocation()">Coordenadas</button>
+        <button class="button1 btn btn-primary" onclick="getLocation()">Coordenadas</button>
     </div>
     <p id="coords"></p>
 
-    <p>En el siguiente cuadro de texto ingrese su ciudad y precione Buscar</p>
-    <div class="contenedor">
+    <p class="font-weight-bold">En el siguiente cuadro de texto ingrese su ciudad y precione Buscar</p>
+    <div class="contenedor container-fluid">
         <div class="input">
-            <div class="container-lg gb-primary">
+            <div class="container-fluid table">
                 <div class="row">
-                    <div class="col-7">
+                    <div class="col-10">
                         <input type="text" class="ingresaCiudad form-control" placeholder="Ingresar Ciudad">
                     </div>
                     <div class="col-xs">
@@ -28,7 +28,7 @@
                         <div class="climaLocal">
                             <h1 class="nombre">
                                 <img src="" alt="" class="icon">
-                                <p class="ingresaCiudad"></p>
+                                <p class="NomCiudad font-weight-bold">Los datos se verán aquí</p>
                                 <p class="desc"></p>
                                 <p class="temp"></p>
                             </h1>
@@ -36,8 +36,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 <script src="elClima.js"></script>
 </body>
